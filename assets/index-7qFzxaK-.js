@@ -1,0 +1,1 @@
+import{a5 as e,aQ as o,cx as u}from"./index-CB6G4Cyn.js";const m=t=>t,i=["class","style"],E=/^on[A-Z]/,x=(t={})=>{const{excludeListeners:c=!1,excludeKeys:s}=t,l=e(()=>(s?.value||[]).concat(i)),n=o();return n?e(()=>{var r;return u(Object.entries((r=n.proxy)==null?void 0:r.$attrs).filter(([a])=>!l.value.includes(a)&&!(c&&E.test(a))))}):e(()=>({}))};export{m,x as u};
