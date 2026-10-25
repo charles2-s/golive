@@ -94,4 +94,18 @@ const server = http.createServer((req, res) => {
   serveStatic(req, res);
 });
 
-server.listen(8000, () => console.log('Server running at http://localhost:8000 (API proxied to live backend)'));
+server.listen(8000, '0.0.0.0', () => {
+  const { networkInterfaces } = require('os');
+  const nets = networkInterfaces();
+  const urls = [];
+  for (const name of Object.keys(nets)) {
+    for (const net of nets[name]) {
+      if (net.family === 'IPv4' && !net.internal) {
+        urls.push(`http://${net.address}:8000`);
+      }
+    }
+  }
+  console.log('Server running on:');
+  urls.forEach(u => console.log('  ' + u));
+  console.log('  (also http://localhost:8000)');
+});
