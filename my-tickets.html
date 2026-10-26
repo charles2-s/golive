@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GoLive Asia — My Tickets</title>
+  <link rel="icon" href="/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/tickets.css">
+</head>
+<body class="tickets-page">
+  <!-- Top nav bar -->
+  <nav class="top-nav">
+    <a href="index.html" class="nav-logo">
+      <img src="/images/logo.png" alt="GoLive Logo" class="nav-logo-img">
+      <span>GoLive Asia</span>
+    </a>
+    <div class="nav-user" id="nav-user">
+      <div class="user-avatar" id="user-avatar">?</div>
+      <div class="user-menu">
+        <div class="user-greeting" id="user-greeting">Hi, Guest</div>
+        <ul class="user-dropdown" id="user-dropdown">
+          <li><a href="index.html">Dashboard</a></li>
+          <li><a href="my-tickets.html" class="active">My Ticket</a></li>
+          <li><a href="index.html">Support</a></li>
+          <li><a href="#" id="logout-link">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page content -->
+  <main class="page-container">
+    <a href="index.html" class="back-link">&lt; Back to Dashboard</a>
+    <h1 class="page-title">My Ticket</h1>
+
+    <!-- Upcoming section -->
+    <section class="tickets-section">
+      <div class="section-header">
+        <h2>Upcoming</h2>
+        <div class="section-arrows">
+          <button class="arrow-btn" id="upcoming-prev" aria-label="Previous">&#8249;</button>
+          <button class="arrow-btn" id="upcoming-next" aria-label="Next">&#8247;</button>
+        </div>
+      </div>
+
+      <!-- Search bar -->
+      <div class="search-bar">
+        <span class="search-icon">&#128270;</span>
+        <input type="text" id="ticket-search" placeholder="Search by Artist or Event">
+      </div>
+
+      <!-- Ticket cards carousel -->
+      <div class="tickets-carousel" id="upcoming-carousel">
+        <!-- populated by JS -->
+      </div>
+
+      <!-- Empty state -->
+      <div class="empty-state" id="upcoming-empty" style="display:none;">
+        No upcoming tickets found
+      </div>
+    </section>
+
+    <!-- Past section -->
+    <section class="tickets-section">
+      <div class="section-header">
+        <h2>Past Events</h2>
+        <div class="section-arrows">
+          <button class="arrow-btn" id="past-prev" aria-label="Previous">&#8249;</button>
+          <button class="arrow-btn" id="past-next" aria-label="Next">&#8247;</button>
+        </div>
+      </div>
+
+      <div class="tickets-carousel" id="past-carousel">
+        <!-- populated by JS -->
+      </div>
+
+      <div class="empty-state" id="past-empty" style="display:none;">
+        No past tickets found
+      </div>
+    </section>
+  </main>
+
+  <script src="/js/tickets.js"></script>
+  <script src="/js/my-tickets.js"></script>
+</body>
+</html>

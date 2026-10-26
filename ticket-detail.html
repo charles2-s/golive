@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GoLive Asia — Ticket Detail</title>
+  <link rel="icon" href="/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/tickets.css">
+</head>
+<body class="ticket-detail-page">
+  <!-- Hero image -->
+  <div class="detail-hero" id="detail-hero">
+    <img id="detail-hero-img" src="" alt="" class="detail-hero-img">
+    <div class="detail-hero-overlay"></div>
+  </div>
+
+  <!-- Back link -->
+  <a href="index.html" class="back-link detail-back">&lt; Back To Dashboard</a>
+
+  <!-- Badge -->
+  <div class="detail-badge" id="detail-badge">Concert</div>
+
+  <!-- Artist info -->
+  <div class="detail-artist" id="detail-artist"></div>
+  <div class="detail-tour" id="detail-tour"></div>
+
+  <!-- Info chips -->
+  <div class="detail-chips" id="detail-chips">
+    <span class="chip">📅 <span id="chip-date"></span></span>
+  </div>
+
+  <!-- Tabs -->
+  <div class="detail-tabs" id="detail-tabs">
+    <!-- populated by JS -->
+  </div>
+
+  <!-- Ticket stub card -->
+  <div class="ticket-stub" id="ticket-stub">
+    <div class="stub-row"><span>Ticket No</span><span id="stub-ticketNo"></span></div>
+    <div class="stub-row"><span>Order ID</span><span id="stub-orderId"></span></div>
+    <div class="stub-price" id="stub-price"></div>
+    <div class="stub-row"><span>Participant</span><span id="stub-participant"></span></div>
+    <div class="stub-row"><span>Category</span><span id="stub-category"></span></div>
+  </div>
+
+  <!-- Remove button -->
+  <button class="btn-remove" id="remove-ticket-btn">Remove Ticket</button>
+
+  <script src="/js/tickets.js"></script>
+  <script src="/js/ticket-detail.js"></script>
+</body>
+</html>

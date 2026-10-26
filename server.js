@@ -15,7 +15,7 @@ const MIME = {
   '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg',
   '.gif': 'image/gif', '.svg': 'image/svg+xml', '.webp': 'image/webp',
   '.ico': 'image/x-icon', '.woff': 'font/woff', '.woff2': 'font/woff2',
-  '.woff2': 'font/woff2', '.ttf': 'font/ttf', '.eot': 'application/vnd.ms-fontobject',
+  '.ttf': 'font/ttf', '.eot': 'application/vnd.ms-fontobject',
   '.mp4': 'video/mp4', '.pdf': 'application/pdf',
 };
 
@@ -26,8 +26,6 @@ function serveStatic(req, res) {
   if (!filePath.startsWith(ROOT)) return send404(res);
   fs.readFile(filePath, (err, data) => {
     if (err) {
-      // SPA fallback: for routes without a file extension (SPA routes like /home, /discover, /store, etc.)
-      // serve index.html so Vue Router can handle client-side routing.
       const ext = path.extname(urlPath);
       if (!ext || ext === '.html') {
         fs.readFile(path.join(ROOT, 'index.html'), (err2, data2) => {
@@ -50,40 +48,9 @@ function send404(res) {
 }
 
 function proxyApi(req, res) {
-  const urlPath = req.url;
-  const target = `https://${LIVE}${urlPath}`;
-  const method = req.method;
-  let body = '';
-  req.on('data', c => body += c);
-  req.on('end', () => {
-    const headers = {
-      'User-Agent': UA,
-      'Referer': `https://${LIVE}/`,
-      'Origin': `https://${LIVE}`,
-    };
-    if (body) {
-      headers['Content-Type'] = req.headers['content-type'] || 'application/json';
-      headers['Content-Length'] = Buffer.byteLength(body);
-    }
-    const u = new URL(target);
-    const options = {
-      hostname: u.hostname, port: 443, path: u.pathname + u.search,
-      method, headers,
-    };
-    const proxyReq = https.request(options, proxyRes => {
-      res.writeHead(proxyRes.statusCode, {
-        'Content-Type': proxyRes.headers['content-type'] || 'application/json',
-        'Access-Control-Allow-Origin': '*',
-      });
-      proxyRes.pipe(res);
-    });
-    proxyReq.on('error', e => {
-      res.writeHead(502, { 'Content-Type': 'application/json' });
-      res.end(JSON.stringify({ error: String(e) }));
-    });
-    if (body) proxyReq.write(body);
-    proxyReq.end();
-  });
+  // Disabled: do not call external API. Return empty/fallback response.
+  res.writeHead(503, { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' });
+  res.end(JSON.stringify({ error: 'External API disabled. Using local mock data.' }));
 }
 
 const server = http.createServer((req, res) => {
