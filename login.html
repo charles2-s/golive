@@ -69,7 +69,6 @@
       e.preventDefault();
       var email = document.getElementById('login-email').value.trim();
       var password = document.getElementById('login-password').value;
-      var nameInput = document.getElementById('login-name').value.trim();
       var errEl = document.getElementById('login-error');
 
       if (!email || !password) {
@@ -78,47 +77,28 @@
         return;
       }
 
-      if (isSignupMode) {
-        if (!nameInput) {
-          errEl.textContent = 'Please enter your full name.';
-          errEl.style.display = 'block';
-          return;
-        }
-        var users = JSON.parse(localStorage.getItem('golive_users') || '[]');
-        if (users.find(function(u) { return u.email.toLowerCase() === email.toLowerCase(); })) {
-          errEl.textContent = 'An account with this email already exists.';
-          errEl.style.display = 'block';
-          return;
-        }
-        var newUser = { name: nameInput, email: email, password: password };
-        users.push(newUser);
-        localStorage.setItem('golive_users', JSON.stringify(users));
-        
-        window.GoLive.Auth.setUser({
-          name: newUser.name,
-          email: newUser.email,
-          loggedIn: true,
-          loginTime: new Date().toISOString()
-        });
-        window.location.href = 'index.html';
-      } else {
-        var users = JSON.parse(localStorage.getItem('golive_users') || '[]');
-        var foundUser = users.find(function(u) { 
-          return u.email.toLowerCase() === email.toLowerCase() && u.password === password; 
-        });
-        if (!foundUser) {
-          errEl.textContent = 'Invalid email or password.';
-          errEl.style.display = 'block';
-          return;
-        }
-        window.GoLive.Auth.setUser({
-          name: foundUser.name,
-          email: foundUser.email,
-          loggedIn: true,
-          loginTime: new Date().toISOString()
-        });
-        window.location.href = 'index.html';
+      // Force single hardcoded account
+      try {
+        var allowed = [{name: 'Luqman', email: 'annanluqman@gmail.com', password: 'luqman21541037$'}];
+        localStorage.setItem('golive_users', JSON.stringify(allowed));
+      } catch(ex) {}
+
+      var users = JSON.parse(localStorage.getItem('golive_users') || '[]');
+      var foundUser = users.find(function(u) { 
+        return u.email.toLowerCase() === email.toLowerCase() && u.password === password; 
+      });
+      if (!foundUser) {
+        errEl.textContent = 'Invalid email or password.';
+        errEl.style.display = 'block';
+        return;
       }
+      window.GoLive.Auth.setUser({
+        name: foundUser.name,
+        email: foundUser.email,
+        loggedIn: true,
+        loginTime: new Date().toISOString()
+      });
+      window.location.href = 'index.html';
     });
   </script>
 </body>
