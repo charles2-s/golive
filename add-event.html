@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GoLive Asia — Add Event</title>
+  <link rel="icon" href="/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/tickets.css">
+  <style>
+    .add-event-container { max-width: 700px; margin: 40px auto; padding: 0 20px; }
+    .add-event-card { background: #1a1a2e; border-radius: 12px; padding: 30px; border: 1px solid #2a2a4a; }
+    .add-event-header { margin-bottom: 30px; }
+    .add-event-header h1 { color: #fff; font-size: 28px; margin: 10px 0; }
+    .add-event-header a { color: #2DD4D0; text-decoration: none; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+    .form-group { margin-bottom: 20px; }
+    .form-group label { display: block; color: #fff; margin-bottom: 8px; font-weight: 600; }
+    .form-group input, .form-group select { width: 100%; padding: 12px; background: #0f0f23; border: 1px solid #2a2a4a; border-radius: 8px; color: #fff; font-family: 'Urbanist', sans-serif; box-sizing: border-box; }
+    .checkbox-group { display: flex; align-items: center; gap: 10px; }
+    .checkbox-group input { width: auto; }
+    .btn-group { display: flex; gap: 10px; margin-top: 30px; }
+    .btn { flex: 1; padding: 12px; border: none; border-radius: 8px; font-family: 'Urbanist', sans-serif; font-weight: 600; cursor: pointer; }
+    .btn-primary { background: linear-gradient(135deg, #2DD4D0 0%, #14B8A6 100%); color: #000; }
+    .btn-secondary { background: #2a2a4a; color: #fff; }
+    .events-list { margin-top: 40px; }
+    .events-list h2 { color: #fff; margin-bottom: 20px; }
+    .event-item { display: flex; justify-content: space-between; align-items: center; padding: 15px; background: #1a1a2e; border: 1px solid #2a2a4a; border-radius: 8px; margin-bottom: 10px; }
+    .event-info { color: #fff; }
+    .event-info .title { font-weight: 600; }
+    .event-info .meta { color: #9ca3af; font-size: 14px; }
+    .btn-delete { padding: 8px 16px; background: #ef4444; color: #fff; border: none; border-radius: 6px; cursor: pointer; }
+  </style>
+</head>
+<body style="background: #0f0f23; font-family: 'Urbanist', sans-serif; margin: 0;">
+  <div class="add-event-container">
+    <div class="add-event-card">
+      <div class="add-event-header">
+        <a href="index.html">← Back to Home</a>
+        <h1>Add New Event</h1>
+        <p style="color: #9ca3af;">Create a new event that will appear on the home page</p>
+      </div>
+
+      <form id="add-event-form">
+        <div class="form-group">
+          <label>Event Title</label>
+          <input type="text" id="title" required>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Artist</label>
+            <input type="text" id="artist" required>
+          </div>
+          <div class="form-group">
+            <label>Category</label>
+            <select id="category">
+              <option value="Concert">Concert</option>
+              <option value="Festival">Festival</option>
+              <option value="Comedy">Comedy</option>
+              <option value="Theatre">Theatre</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Date</label>
+            <input type="text" id="date" placeholder="e.g., 12 Dec 2026" required>
+          </div>
+          <div class="form-group">
+            <label>Time</label>
+            <input type="text" id="time" placeholder="e.g., 7:30 PM" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Venue</label>
+          <input type="text" id="venue" required>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Price From (RM)</label>
+            <input type="number" id="priceFrom" required>
+          </div>
+          <div class="form-group">
+            <label>Status</label>
+            <select id="status">
+              <option value="upcoming">Upcoming</option>
+              <option value="onSale">On Sale</option>
+              <option value="trending">Trending</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Image URL</label>
+          <input type="url" id="imageUrl" placeholder="https://..." required>
+        </div>
+
+        <div class="form-group checkbox-group">
+          <input type="checkbox" id="featured" checked>
+          <label for="featured" style="margin: 0;">Featured on Home Page</label>
+        </div>
+
+        <div class="btn-group">
+          <button type="submit" class="btn btn-primary">Add Event</button>
+          <button type="button" class="btn btn-secondary" onclick="window.location.href='index.html'">Cancel</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="events-list">
+      <h2>Existing Events</h2>
+      <div id="events-list"></div>
+    </div>
+  </div>
+
+  <script src="/js/events.js"></script>
+  <script>
+    function loadEvents() {
+      var events = window.GoLiveEvents.EventStore.getAll();
+      var listEl = document.getElementById('events-list');
+      listEl.innerHTML = '';
+      if (events.length === 0) {
+        listEl.innerHTML = '<p style="color: #9ca3af;">No events added yet</p>';
+        return;
+      }
+      events.forEach(function(ev) {
+        var div = document.createElement('div');
+        div.className = 'event-item';
+        div.innerHTML = '<div class="event-info"><div class="title">' + ev.artist + ' - ' + ev.title + '</div><div class="meta">' + ev.date + ' • ' + ev.venue + ' • RM ' + ev.priceFrom + '</div></div><button class="btn-delete" onclick="deleteEvent(\'' + ev.id + '\')">Delete</button>';
+        listEl.appendChild(div);
+      });
+    }
+
+    function deleteEvent(id) {
+      if (confirm('Delete this event?')) {
+        window.GoLiveEvents.EventStore.remove(id);
+        loadEvents();
+      }
+    }
+
+    document.getElementById('add-event-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var ev = {
+        title: document.getElementById('title').value,
+        artist: document.getElementById('artist').value,
+        category: document.getElementById('category').value,
+        date: document.getElementById('date').value,
+        time: document.getElementById('time').value,
+        venue: document.getElementById('venue').value,
+        priceFrom: parseInt(document.getElementById('priceFrom').value),
+        imageUrl: document.getElementById('imageUrl').value,
+        status: document.getElementById('status').value,
+        featured: document.getElementById('featured').checked
+      };
+      window.GoLiveEvents.EventStore.add(ev);
+      alert('Event added successfully!');
+      this.reset();
+      document.getElementById('featured').checked = true;
+      loadEvents();
+    });
+
+    loadEvents();
+  </script>
+</body>
+</html>
