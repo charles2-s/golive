@@ -3,14 +3,28 @@
 import http.server
 import socketserver
 import os
+import shutil
 import urllib.request
 import urllib.error
+import gzip
+import io
 
 WEB_DIR = "/home/charles-003/golive_asia_backup/golive4"
 PORT = 8081
 API_BASE = "https://www.golive-asia.com"
 
 ASSET_PREFIXES = ("/assets/", "/scripts/", "/styles/", "/images/", "/favicon.ico")
+
+COMPRESSIBLE_TYPES = ("text/html", "text/css", "application/javascript", "text/javascript", "application/json")
+
+LONG_CACHE_EXTENSIONS = (".js", ".css", ".png", ".jpg", ".jpeg", ".gif", ".svg", ".ico", ".webp", ".woff", ".woff2")
+
+
+def gzip_data(data: bytes) -> bytes:
+    buf = io.BytesIO()
+    with gzip.GzipFile(fileobj=buf, mode="wb", compresslevel=6) as f:
+        f.write(data)
+    return buf.getvalue()
 
 
 class Handler(http.server.SimpleHTTPRequestHandler):
@@ -21,7 +35,6 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         """Proxy an API request to the live site."""
         url = API_BASE + self.path
         try:
-            # Read request body for POST/PUT/etc
             content_length = int(self.headers.get("Content-Length", 0))
             body = self.rfile.read(content_length) if content_length > 0 else None
 
@@ -30,7 +43,6 @@ class Handler(http.server.SimpleHTTPRequestHandler):
                 "Accept": "application/json",
                 "Origin": "http://127.0.0.1:8081",
             }
-            # Forward content-type for POST requests
             if self.headers.get("Content-Type"):
                 headers["Content-Type"] = self.headers["Content-Type"]
             if self.headers.get("Authorization"):
@@ -68,7 +80,6 @@ class Handler(http.server.SimpleHTTPRequestHandler):
             self.wfile.write(str(e).encode())
 
     def do_OPTIONS(self):
-        """Handle CORS preflight requests."""
         self.send_response(200)
         self.send_header("Access-Control-Allow-Origin", "*")
         self.send_header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS")
@@ -80,7 +91,6 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         if self.path.startswith("/api/"):
             return self._proxy_request("GET")
 
-        # Serve asset/script/style/image/favicon paths from root
         if self.path == "/favicon.ico" or any(self.path.startswith(p) for p in ASSET_PREFIXES):
             file_path = os.path.join(WEB_DIR, self.path.lstrip("/"))
             if os.path.exists(file_path) and not os.path.isdir(file_path):
@@ -92,7 +102,6 @@ class Handler(http.server.SimpleHTTPRequestHandler):
             self.wfile.write(b"Not found")
             return
 
-        # SPA fallback
         path = self.translate_path(self.path)
         if not os.path.exists(path) or os.path.isdir(path):
             self.path = "/index.html"
@@ -109,6 +118,57 @@ class Handler(http.server.SimpleHTTPRequestHandler):
     def end_headers(self):
         self.send_header("Access-Control-Allow-Origin", "*")
         super().end_headers()
+
+    def send_head(self):
+        """Override to add caching headers and gzip compression."""
+        path = self.translate_path(self.path)
+        if not os.path.exists(path):
+            self.send_error(404, "File not found")
+            return None
+        if os.path.isdir(path):
+            self.send_error(404, "Directory not found")
+            return None
+
+        try:
+            f = open(path, "rb")
+        except OSError:
+            self.send_error(404, "File not found")
+            return None
+
+        try:
+            self.send_response(200)
+            self.send_header("Content-Type", self.guess_type(path))
+
+            # Long cache for immutable assets
+            ext = os.path.splitext(path)[1].lower()
+            if ext in LONG_CACHE_EXTENSIONS:
+                self.send_header("Cache-Control", "public, max-age=31536000, immutable")
+            else:
+                self.send_header("Cache-Control", "public, max-age=3600")
+
+            # Gzip compressible text files
+            accept_encoding = self.headers.get("Accept-Encoding", "")
+            content_type = self.guess_type(path)
+            if "gzip" in accept_encoding and any(ct in content_type for ct in COMPRESSIBLE_TYPES):
+                f.seek(0)
+                data = f.read()
+                compressed = gzip_data(data)
+                self.send_header("Content-Encoding", "gzip")
+                self.send_header("Content-Length", str(len(compressed)))
+                self.end_headers()
+                self.wfile.write(compressed)
+                return None
+            else:
+                self.send_header("Content-Length", str(os.path.getsize(path)))
+                self.end_headers()
+                return f
+        except Exception:
+            f.close()
+            raise
+
+    def copyfile(self, source, outputfile):
+        shutil.copyfileobj(source, outputfile)
+
 
 
 with socketserver.TCPServer(("0.0.0.0", PORT), Handler) as httpd:
