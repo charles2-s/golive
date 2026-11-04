@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script>
+      window.VITE_FACEBOOK_APP_ID="1763263928386072";window.fbAsyncInit=function(){FB.init({appId:VITE_FACEBOOK_APP_ID,cookie:true,xfbml:true,version:"v25.0"});FB.AppEvents.logPageView();};(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return;}js=d.createElement(s);js.id=id;js.src="https://connect.facebook.net/en_US/sdk.js";fjs.parentNode.insertBefore(js,fjs);}(document,"script","facebook-jssdk"));
+    </script>
+
+    <script src="/scripts/appleid.auth.js"></script>
+
+    <title>GoLive Asia</title>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BX8X45KQG4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag("js", new Date());
+
+      gtag("config", "G-BX8X45KQG4", { send_page_view: false });
+    </script>
+    <script type="module" crossorigin="" src="/assets/index-CB6G4Cyn.js"></script>
+    <link rel="stylesheet" crossorigin="" href="/assets/index-B3hwWkiv.css">
+    <style>
+.golive-add-ticket{display:inline-flex;align-items:center;gap:6px;background:linear-gradient(135deg,#039FAB 0%,#04C9DA 100%);color:#fff;font-size:12px;font-weight:600;padding:6px 14px;border-radius:999px;border:none;cursor:pointer;margin-left:12px;white-space:nowrap}
+.golive-add-ticket:hover{opacity:.9;transform:translateY(-1px)}
+.golive-modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:10000;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(4px);display:none}
+.golive-modal{background:#1a1a2e;border:1px solid rgba(255,255,255,0.15);border-radius:16px;padding:24px;width:min(400px,90vw);max-height:90vh;overflow-y:auto;color:#fff;font-family:inherit}
+.golive-modal h2{margin:0 0 20px 0;font-size:20px;font-weight:700;color:#fff}
+.golive-form-group{margin-bottom:16px}
+.golive-form-group label{display:block;font-size:11px;font-weight:600;letter-spacing:.5px;color:#888;margin-bottom:6px;text-transform:uppercase}
+.golive-form-group input,.golive-form-group select{width:100%;padding:10px 14px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.15);border-radius:8px;color:#fff;font-size:14px;box-sizing:border-box}
+.golive-form-group input:focus,.golive-form-group select:focus{outline:none;border-color:#039FAB}
+.golive-form-group input[type="file"]{padding:6px 10px;background:rgba(255,255,255,0.03);font-size:13px}
+.golive-form-group input[type="file"]::file-selector-button{margin-right:8px;background:rgba(255,255,255,0.1);border:none;border-radius:6px;color:#fff;font-size:12px;font-weight:600;padding:4px 10px;cursor:pointer}
+.golive-form-group input[type="file"]::file-selector-button:hover{background:rgba(255,255,255,0.2)}
+.golive-image-preview{margin-top:10px}
+.golive-image-preview img{max-width:120px;max-height:120px;border-radius:8px;border:1px solid rgba(255,255,255,0.2);object-fit:cover;object-position:center;display:block;margin-top:6px}
+.golive-storage-warning{font-size:11px;color:#ff6b6b;margin-top:6px;display:none;line-height:1.4}
+.golive-modal-actions{display:flex;gap:10px;margin-top:20px}
+.golive-btn-cancel{flex:1;padding:10px 14px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.15);border-radius:8px;color:#fff;font-size:13px;font-weight:600;cursor:pointer}
+.golive-btn-save{flex:1;padding:10px 14px;background:linear-gradient(135deg,#039FAB 0%,#04C9DA 100%);border:none;border-radius:8px;color:#fff;font-size:13px;font-weight:600;cursor:pointer}
+.golive-ticket-delete{position:absolute;top:10px;left:10px;z-index:5;width:24px;height:24px;background:rgba(0,0,0,0.6);border:1px solid rgba(255,255,255,0.3);border-radius:50%;color:#fff;font-size:14px;font-weight:700;line-height:1;display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;transition:opacity .2s}
+.ticket-card:hover .golive-ticket-delete,.past-card:hover .golive-ticket-delete{opacity:1}
+.golive-ticket-delete:hover{background:rgba(255,255,255,0.2)}
+.golive-empty-hidden{display:none}
+.golive-saved-card{cursor:default}
+.golive-saved-card .ticket-img img{object-fit:cover;object-position:top center}
+.golive-saved-card .ticket-img:after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.95) 0%,rgba(0,0,0,.4) 40%,transparent 100%);pointer-events:none}
+.golive-saved-card .ticket-info{position:absolute;bottom:0;left:0;right:0;padding:16px;z-index:2;display:flex;flex-direction:column;gap:4px}
+.golive-saved-card .ticket-info .ticket-tour{font-size:10px;font-weight:600;color:#ffffffb3;text-transform:uppercase;letter-spacing:.5px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.golive-saved-card .ticket-info .ticket-name{font-size:18px;font-weight:800;color:#fff;line-height:1.2;margin-bottom:2px}
+.golive-saved-card .ticket-info .ticket-count{display:inline-flex;align-items:center;gap:6px;margin-top:6px;font-size:11px;font-weight:700;color:#fff;background:#ffffff26;border-radius:999px;padding:4px 12px;width:fit-content;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+    <a style="position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden;" href="/pages/privacy-policy.html" target="_blank">Privacy Policy</a>
+    <div id="fb-root" class="fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div></div>
+    <script>
+(function(){
+'use strict';
+const STORAGE_KEY='golive_tickets';
+let interval=0;
+function init(){
+const mt=document.querySelector('.my-tickets');
+if(!mt){if(interval<200){interval++;setTimeout(init,100);}return;}
+setup();
+}
+function setup(){
+let tickets=[];
+try{tickets=JSON.parse(localStorage.getItem(STORAGE_KEY)||'[]')}catch(e){}
+injectBtn();
+injectModal();
+renderSaved(tickets);
+setupForm(tickets);
+}
+function injectBtn(){
+const sh=document.querySelector('.section-header');
+if(!sh||document.querySelector('.golive-add-ticket'))return;
+const w=document.createElement('div');w.className='golive-add-btn-wrapper';
+w.innerHTML='<button class="golive-add-ticket">+ Add Ticket</button>';
+const t=sh.querySelector('.section-title');
+if(t)t.parentNode.insertBefore(w,t.nextSibling);else sh.appendChild(w);
+w.querySelector('.golive-add-ticket').addEventListener('click',openModal);
+}
+function injectModal(){
+if(document.querySelector('.golive-modal-overlay'))return;
+const ov=document.createElement('div');ov.className='golive-modal-overlay';
+ov.innerHTML='<div class="golive-modal"><h2>Add Ticket</h2><form id="golive-ticket-form"><div class="golive-form-group"><label>Event name</label><input type="text" name="event_name" required placeholder="e.g. BTS Concert"></div><div class="golive-form-group"><label>Tour/show title</label><input type="text" name="tour_title" required placeholder="e.g. World Tour 2024"></div><div class="golive-form-group"><label>Date</label><input type="date" name="event_date" required></div><div class="golive-form-group"><label>Venue</label><input type="text" name="venue" required placeholder="e.g. TM Stadium Nasional"></div><div class="golive-form-group"><label>Time</label><input type="time" name="event_time"></div><div class="golive-form-group"><label>Category</label><input type="text" name="category" placeholder="e.g. VIP, Cat 1"></div><div class="golive-form-group"><label>Price</label><input type="text" name="price" placeholder="e.g. RM 250"></div><div class="golive-form-group"><label>Ticket number</label><input type="text" name="ticket_number" placeholder="e.g. TKT-001234"></div><div class="golive-form-group"><label>Order ID</label><input type="text" name="order_id" placeholder="e.g. ORD-5678"></div><div class="golive-form-group"><label>Participant name</label><input type="text" name="participant_name" placeholder="e.g. John Doe"></div><div class="golive-form-group"><label>Poster image</label><input type="file" name="image_file" accept="image/*" required><div class="golive-image-preview"><img id="golive-img-preview" src="" alt="Preview"></div><div class="golive-storage-warning" id="golive-storage-warn">Image is too large and will be compressed to fit storage limits.</div></div><div class="golive-modal-actions"><button type="button" class="golive-btn-cancel">Cancel</button><button type="submit" class="golive-btn-save">Save Ticket</button></div></form></div>';
+document.body.appendChild(ov);
+ov.querySelector('.golive-btn-cancel').addEventListener('click',closeModal);
+ov.addEventListener('click',(e)=>{if(e.target===ov)closeModal();});
+let previewImg=null;
+const fileInput=ov.querySelector('input[name="image_file"]');
+const previewWrapper=ov.querySelector('.golive-image-preview');
+const storageWarn=ov.querySelector('.golive-storage-warning');
+fileInput.addEventListener('change',function(e){
+const f=this.files&&this.files[0];if(!f)return;
+const reader=new FileReader();
+reader.onload=function(ev){
+const img=new Image();
+img.onload=function(){
+const MAX_W=800;const canvas=document.createElement('canvas');let w=img.width,h=img.height;
+if(w>MAX_W){h=Math.round(h*(MAX_W/w));w=MAX_W;}
+canvas.width=w;canvas.height=h;const ctx=canvas.getContext('2d');
+ctx.drawImage(img,0,0,w,h);
+const dataURL=canvas.toDataURL('image/jpeg',0.85);
+previewImg=dataURL;document.getElementById('golive-img-preview').src=dataURL;previewWrapper.style.display='block';
+storageWarn.style.display=(f.size>2*1024*1024?'block':'none');
+};
+img.src=ev.target.result;
+};
+reader.readAsDataURL(f);
+});
+document.getElementById('golive-ticket-form').addEventListener('submit',(e)=>{
+e.preventDefault();
+const fd=new FormData(e.target);
+const tk=Object.fromEntries(fd.entries());
+tk.status=new Date(tk.event_date)>=new Date()?'Upcoming':'Past';
+tk.id='local_'+Date.now();tk.ticketCount=1;
+tk.image_url=previewImg||'';
+delete tk.image_file;
+let ts=[];try{ts=JSON.parse(localStorage.getItem(STORAGE_KEY)||'[]')}catch(e){}
+ts.push(tk);localStorage.setItem(STORAGE_KEY,JSON.stringify(ts));
+closeModal();renderSaved(ts);
+});
+}
+function openModal(){const ov=document.querySelector('.golive-modal-overlay');if(ov)ov.style.display='flex';}
+function closeModal(){const ov=document.querySelector('.golive-modal-overlay');if(ov)ov.style.display='none';}
+function del(id){
+let ts=[];try{ts=JSON.parse(localStorage.getItem(STORAGE_KEY)||'[]')}catch(e){}
+ts=ts.filter(t=>t.id!==id);localStorage.setItem(STORAGE_KEY,JSON.stringify(ts));
+renderSaved(ts);
+}
+function renderSaved(ts){
+const saved=ts.filter(t=>t.id&&t.id.startsWith('local_'));
+const up=saved.filter(t=>t.status==='Upcoming');
+const pa=saved.filter(t=>t.status==='Past');
+renderSec('upcoming',up);renderSec('past',pa);
+setTimeout(addDelBtns,100);
+}
+function renderSec(type,tickets){
+let target;if(type==='upcoming')target=document.querySelector('.carousel-track');else target=document.querySelector('.past-grid');
+if(!target)return;
+let sc=target.querySelector('.golive-saved-container');if(!sc){sc=document.createElement('div');sc.className='golive-saved-container';target.appendChild(sc);}
+sc.innerHTML='';
+const empty=target.querySelector('.empty-state');if(empty)empty.classList.add('golive-empty-hidden');
+if(tickets.length===0){if(empty)empty.classList.remove('golive-empty-hidden');return;}
+tickets.forEach(tk=>{
+const card=document.createElement('div');card.className=(type==='upcoming'?'ticket-card':'past-card')+' golive-saved-card';card.style.position='relative';card.style['--card-bg']=tk.color||'#1a1a2e';
+const d=new Date(tk.event_date);const day=d.getDate().toString().padStart(2,'0');const month=d.toLocaleDateString('en-GB',{month:'short'}).toUpperCase();const year=d.getFullYear();
+card.innerHTML='<div class="golive-ticket-delete">'+'&#215;'+'</div><div class="golive-ticket-tags"><span class="golive-status-tag">'+day+' '+month+'</span><span class="golive-venue-tag" title="'+tk.venue+'">'+tk.venue+'</span></div><div class="golive-ticket-img"><img src="'+(tk.image_url||'')+'" alt="'+(tk.artist_name||tk.event_name)+'"></div><div class="golive-ticket-info">'+(tk.tour_title?'<span class="golive-ticket-tour">'+tk.tour_title+'</span>':'')+'<span class="golive-ticket-name">'+(tk.event_name||'Event')+'</span><div class="golive-ticket-count"><span>🎫</span> '+(tk.ticketCount||1)+' '+(tk.ticketCount===1?'Ticket':'Tickets')+'</div></div>';
+card.querySelector('.golive-ticket-delete').addEventListener('click',(e)=>{e.preventDefault();e.stopPropagation();del(tk.id);});
+sc.appendChild(card);
+});
+}
+function addDelBtns(){
+document.querySelectorAll('.ticket-card:not(.golive-saved-card), .past-card:not(.golive-saved-card)').forEach(card=>{
+if(card.querySelector('.golive-ticket-delete'))return;
+const id=card.getAttribute('key');if(!id)return;
+const btn=document.createElement('div');btn.className='golive-ticket-delete';btn.textContent='×';btn.style.position='absolute';btn.style.top='10px';btn.style.left='10px';btn.style.zIndex='5';btn.style.width='24px';btn.style.height='24px';btn.style.background='rgba(0,0,0,0.6)';btn.style.border='1px solid rgba(255,255,255,0.3)';btn.style.borderRadius='50%';btn.style.color='#fff';btn.style.fontSize='14px';btn.style.fontWeight='700';btn.style.lineHeight='1';btn.style.display='flex';btn.style.alignItems='center';btn.style.justifyContent='center';btn.style.cursor='pointer';btn.style.opacity='0';card.style.position='relative';card.addEventListener('mouseenter',()=>btn.style.opacity='1');card.addEventListener('mouseleave',()=>btn.style.opacity='0');btn.addEventListener('mouseenter',()=>btn.style.opacity='1');btn.addEventListener('click',(e)=>{e.preventDefault();e.stopPropagation();del(id);});card.insertBefore(btn,card.firstChild);
+});
+}
+function setupForm(ts){}
+init();
+})();
+</script>
+  </body>
+</html>
