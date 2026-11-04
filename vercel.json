@@ -1,9 +1,5 @@
 {
   "version": 2,
-  "builds": [
-    { "src": "golive4/**", "use": "@vercel/static" },
-    { "src": "api/*.js", "use": "@vercel/node" }
-  ],
   "routes": [
     { "src": "/api/(.*)", "dest": "/api/proxy.js?path=$1" },
     { "src": "/assets/(.*)", "dest": "/golive4/assets/$1" },
@@ -13,6 +9,5 @@
     { "src": "/favicon.ico", "dest": "/golive4/favicon.ico" },
     { "src": "/(.*)", "dest": "/golive4/index.html" }
   ],
-  "cleanUrls": true,
   "trailingSlash": false
 }
