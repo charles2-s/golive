@@ -1256,3 +1256,479 @@ OSError: [Errno 98] Address already in use
 127.0.0.1 - - [04/Nov/2026 21:17:29] "GET /assets/index-OaX_yiqL.js HTTP/1.1" 304 -
 127.0.0.1 - - [04/Nov/2026 21:17:29] "GET /assets/index-D0W6oDrN.js HTTP/1.1" 304 -
 127.0.0.1 - - [04/Nov/2026 21:17:29] "GET /api/user/ticket/list?itemsPerPage=9999 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:26:14] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:26:14] "GET /images/logo/logo.png HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:26:14] "GET /assets/index-CB6G4Cyn.js HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:26:14] "GET /assets/index-B3hwWkiv.css HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:26:16] "POST /api/user/login HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:26:16] "GET /my-tickets HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:28:39] "GET /my-tickets HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 21:28:39] "GET /scripts/appleid.auth.js HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 21:28:39] "GET /assets/index-B3hwWkiv.css HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 21:28:39] "GET /images/logo/logo.png HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 21:28:40] "GET /assets/index-OaX_yiqL.js HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 21:28:40] "GET /assets/index-BEA9sfKh.css HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 21:28:40] "GET /assets/index-D0W6oDrN.js HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 21:28:40] "GET /api/user/ticket/list?itemsPerPage=9999 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:28:42] "GET /assets/index-S_gKt5kb.js HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 21:28:42] "GET /assets/el-button-BsfP9n4d.js HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 21:28:42] "GET /assets/swiper-CW1QUXDe.js HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 21:28:42] "GET /assets/el-scrollbar-WwGscieT.js HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 21:28:42] "GET /assets/castArray-CcNg4HKa.js HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 21:28:42] "GET /assets/el-input-CaECnuly.js HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 21:28:42] "GET /assets/eventRow-BbT3Q7LF.js HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 21:28:42] "GET /assets/el-dialog-Bhrhk7TR.js HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 21:28:42] "GET /assets/index-7qFzxaK-.js HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 21:28:42] "GET /assets/eventSlug-BOfv6vB5.js HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 21:28:42] "GET /assets/eventTag-CylCOQlr.js HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 21:28:42] "GET /assets/socialMedia-CnsKluqP.js HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 21:28:42] "GET /assets/el-card-DCNCxAxl.js HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 21:28:42] "GET /assets/el-button-CNxZYMb2.css HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 21:28:42] "GET /assets/el-scrollbar-BWxh-h6K.css HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 21:28:42] "GET /assets/el-dialog-BDVn8PXQ.css HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 21:28:42] "GET /assets/swiper-Bmq_i_gU.css HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 21:28:42] "GET /assets/el-input-haxN-bjV.css HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 21:28:42] "GET /assets/eventTag-BVqgIU99.css HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 21:28:42] "GET /assets/eventRow-CQl2CMGg.css HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 21:28:42] "GET /assets/el-card-DGFn2Dlf.css HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 21:28:42] "GET /assets/socialMedia-CdgWFg4H.css HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 21:28:42] "GET /assets/index-BLwMd4CF.css HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 21:28:43] "GET /api/event/page/landing/flag HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:28:44] "GET /api/event/list?is_major_sales=1&itemsPerPage=10 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:28:44] "GET /images/noise.svg HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 21:28:44] "GET /api/event/list?is_featured=1&itemsPerPage=99 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:28:45] "GET /api/event/category/list?itemsPerPage=99 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:28:45] "GET /api/announcement/list?is_featured=1&itemsPerPage=4 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:28:45] "GET /api/advertisementBanner/list?itemsPerPage=10&archiveStatus=ACTIVE&platform=web HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:28:46] "GET /images/icon/trending.svg HTTP/1.1" 404 -
+127.0.0.1 - - [04/Nov/2026 21:28:46] "GET /api/event/list?itemsPerPage=9&page=1&sortBy=created_at&sortDesc=true HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:28:46] "GET /images/icon/green_dot.svg HTTP/1.1" 404 -
+127.0.0.1 - - [04/Nov/2026 21:29:05] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:29:05] "GET /scripts/appleid.auth.js HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:29:05] "GET /assets/index-CB6G4Cyn.js HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:29:05] "GET /assets/index-B3hwWkiv.css HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:29:06] "GET /images/logo/logo.png HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:29:06] "GET /assets/index-S_gKt5kb.js HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:29:06] "GET /assets/el-button-BsfP9n4d.js HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:29:06] "GET /assets/el-scrollbar-WwGscieT.js HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:29:06] "GET /assets/swiper-CW1QUXDe.js HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:29:06] "GET /assets/el-button-CNxZYMb2.css HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:29:06] "GET /assets/el-scrollbar-BWxh-h6K.css HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:29:06] "GET /assets/castArray-CcNg4HKa.js HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:29:06] "GET /assets/el-dialog-Bhrhk7TR.js HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:29:06] "GET /assets/eventRow-BbT3Q7LF.js HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:29:06] "GET /assets/el-dialog-BDVn8PXQ.css HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:29:06] "GET /assets/swiper-Bmq_i_gU.css HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:29:06] "GET /assets/index-D0W6oDrN.js HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:29:06] "GET /assets/el-input-CaECnuly.js HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:29:06] "GET /assets/index-7qFzxaK-.js HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:29:06] "GET /assets/eventTag-CylCOQlr.js HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:29:06] "GET /assets/socialMedia-CnsKluqP.js HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:29:06] "GET /assets/eventSlug-BOfv6vB5.js HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:29:06] "GET /assets/el-card-DCNCxAxl.js HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:29:06] "GET /assets/el-input-haxN-bjV.css HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:29:06] "GET /assets/eventTag-BVqgIU99.css HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:29:06] "GET /assets/eventRow-CQl2CMGg.css HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:29:06] "GET /assets/el-card-DGFn2Dlf.css HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:29:06] "GET /assets/socialMedia-CdgWFg4H.css HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:29:06] "GET /assets/index-BLwMd4CF.css HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:29:06] "GET /api/event/page/landing/flag HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:29:07] "GET /api/event/list?is_major_sales=1&itemsPerPage=10 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:29:07] "GET /favicon.ico HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:29:07] "GET /images/noise.svg HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:29:08] "GET /api/event/list?is_featured=1&itemsPerPage=99 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:29:08] "GET /api/event/category/list?itemsPerPage=99 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:29:09] "GET /api/announcement/list?is_featured=1&itemsPerPage=4 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:29:09] "GET /api/advertisementBanner/list?itemsPerPage=10&archiveStatus=ACTIVE&platform=web HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:29:09] "GET /api/event/list?itemsPerPage=9&page=1&sortBy=created_at&sortDesc=true HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:29:09] "GET /images/ig.jpeg HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:29:09] "GET /images/fb.jpeg HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:29:09] "GET /images/x.jpeg HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:29:09] "GET /images/download_right_image.webp HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:29:09] "GET /images/icon/trending.svg HTTP/1.1" 404 -
+127.0.0.1 - - [04/Nov/2026 21:29:09] "GET /images/icon/green_dot.svg HTTP/1.1" 404 -
+127.0.0.1 - - [04/Nov/2026 21:30:17] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:30:17] "GET /images/logo/logo.png HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:30:18] "POST /api/user/login HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:31:20] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:31:21] "GET /images/logo/logo.png HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 21:31:22] "GET /api/event/page/landing/flag HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:31:23] "GET /api/event/list?is_major_sales=1&itemsPerPage=10 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:31:24] "GET /api/event/list?is_featured=1&itemsPerPage=99 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:31:24] "GET /api/event/category/list?itemsPerPage=99 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:31:25] "GET /api/announcement/list?is_featured=1&itemsPerPage=4 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:31:25] "GET /api/advertisementBanner/list?itemsPerPage=10&archiveStatus=ACTIVE&platform=web HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:31:26] "GET /api/event/list?itemsPerPage=9&page=1&sortBy=created_at&sortDesc=true HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:31:26] "GET /images/icon/trending.svg HTTP/1.1" 404 -
+127.0.0.1 - - [04/Nov/2026 21:31:26] "GET /images/icon/green_dot.svg HTTP/1.1" 404 -
+127.0.0.1 - - [04/Nov/2026 21:31:32] "GET /api/user/ticket/list?itemsPerPage=9999 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:37:15] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:37:16] "POST /api/user/login HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:46:21] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:46:21] "GET /images/logo/logo.png HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:46:21] "GET /assets/index-CB6G4Cyn.js HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:46:22] "GET /assets/index-B3hwWkiv.css HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:46:23] "POST /api/user/login HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:51:48] "GET /assets/index-OaX_yiqL.js HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 21:51:48] "GET /assets/index-BEA9sfKh.css HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 21:51:49] "GET /api/user/ticket/list?itemsPerPage=9999 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:51:53] "GET /my-tickets HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 21:51:53] "GET /assets/index-B3hwWkiv.css HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 21:51:53] "GET /images/logo/logo.png HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 21:51:53] "GET /assets/index-D0W6oDrN.js HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 21:51:56] "GET /api/user/ticket/list?itemsPerPage=9999 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:57:31] "GET /my-tickets HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 21:57:31] "GET /assets/index-B3hwWkiv.css HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 21:57:31] "GET /images/logo/logo.png HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 21:57:33] "GET /api/user/ticket/list?itemsPerPage=9999 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:57:38] "GET /assets/index-S_gKt5kb.js HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 21:57:38] "GET /assets/el-button-BsfP9n4d.js HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 21:57:38] "GET /assets/swiper-CW1QUXDe.js HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 21:57:38] "GET /assets/el-scrollbar-WwGscieT.js HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 21:57:38] "GET /assets/el-dialog-Bhrhk7TR.js HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 21:57:38] "GET /assets/castArray-CcNg4HKa.js HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 21:57:38] "GET /assets/eventRow-BbT3Q7LF.js HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 21:57:38] "GET /assets/index-7qFzxaK-.js HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 21:57:38] "GET /assets/el-input-CaECnuly.js HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 21:57:38] "GET /assets/eventTag-CylCOQlr.js HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 21:57:38] "GET /assets/el-button-CNxZYMb2.css HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 21:57:38] "GET /assets/eventSlug-BOfv6vB5.js HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 21:57:38] "GET /assets/el-scrollbar-BWxh-h6K.css HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 21:57:38] "GET /assets/socialMedia-CnsKluqP.js HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 21:57:38] "GET /assets/el-card-DCNCxAxl.js HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 21:57:38] "GET /assets/el-dialog-BDVn8PXQ.css HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 21:57:38] "GET /assets/swiper-Bmq_i_gU.css HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 21:57:38] "GET /assets/el-input-haxN-bjV.css HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 21:57:38] "GET /assets/eventTag-BVqgIU99.css HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 21:57:38] "GET /assets/eventRow-CQl2CMGg.css HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 21:57:38] "GET /assets/el-card-DGFn2Dlf.css HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 21:57:38] "GET /assets/socialMedia-CdgWFg4H.css HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 21:57:38] "GET /assets/index-BLwMd4CF.css HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 21:57:42] "GET /api/event/page/landing/flag HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:57:44] "GET /api/event/list?is_major_sales=1&itemsPerPage=10 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:57:44] "GET /images/noise.svg HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 21:57:44] "GET /api/event/category/list?itemsPerPage=99 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:57:59] "GET /api/event/list?is_featured=1&itemsPerPage=99 HTTP/1.1" 502 -
+127.0.0.1 - - [04/Nov/2026 21:58:16] "GET /api/event/list?itemsPerPage=9&page=1&sortBy=created_at&sortDesc=true HTTP/1.1" 502 -
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 56118)
+Traceback (most recent call last):
+  File "/home/charles-003/golive_asia_backup/serve.py", line 48, in _proxy_request
+    data = resp.read()
+  File "/usr/lib/python3.13/http/client.py", line 510, in read
+    s = self._safe_read(self.length)
+  File "/usr/lib/python3.13/http/client.py", line 667, in _safe_read
+    data = self.fp.read(cursize)
+  File "/usr/lib/python3.13/socket.py", line 723, in readinto
+    return self._sock.recv_into(b)
+           ~~~~~~~~~~~~~~~~~~~~^^^
+  File "/usr/lib/python3.13/ssl.py", line 1304, in recv_into
+    return self.read(nbytes, buffer)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/ssl.py", line 1138, in read
+    return self._sslobj.read(len, buffer)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+TimeoutError: The read operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/charles-003/golive_asia_backup/serve.py", line 18, in __init__
+    super().__init__(*args, directory=WEB_DIR, **kwargs)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/http/server.py", line 687, in __init__
+    super().__init__(*args, **kwargs)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/socketserver.py", line 766, in __init__
+    self.handle()
+    ~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/http/server.py", line 451, in handle
+    self.handle_one_request()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/http/server.py", line 439, in handle_one_request
+    method()
+    ~~~~~~^^
+  File "/home/charles-003/golive_asia_backup/serve.py", line 81, in do_GET
+    return self._proxy_request("GET")
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/home/charles-003/golive_asia_backup/serve.py", line 68, in _proxy_request
+    self.wfile.write(str(e).encode())
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/socketserver.py", line 845, in write
+    self._sock.sendall(b)
+    ~~~~~~~~~~~~~~~~~~^^^
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+127.0.0.1 - - [04/Nov/2026 21:58:17] "GET /api/advertisementBanner/list?itemsPerPage=10&archiveStatus=ACTIVE&platform=web HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:58:17] "GET /api/advertisementBanner/list?itemsPerPage=10&archiveStatus=ACTIVE&platform=web HTTP/1.1" 502 -
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 56128)
+Traceback (most recent call last):
+  File "/home/charles-003/golive_asia_backup/serve.py", line 55, in _proxy_request
+    self.wfile.write(data)
+    ~~~~~~~~~~~~~~~~^^^^^^
+  File "/usr/lib/python3.13/socketserver.py", line 845, in write
+    self._sock.sendall(b)
+    ~~~~~~~~~~~~~~~~~~^^^
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/charles-003/golive_asia_backup/serve.py", line 18, in __init__
+    super().__init__(*args, directory=WEB_DIR, **kwargs)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/http/server.py", line 687, in __init__
+    super().__init__(*args, **kwargs)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/socketserver.py", line 766, in __init__
+    self.handle()
+    ~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/http/server.py", line 451, in handle
+    self.handle_one_request()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/http/server.py", line 439, in handle_one_request
+    method()
+    ~~~~~~^^
+  File "/home/charles-003/golive_asia_backup/serve.py", line 81, in do_GET
+    return self._proxy_request("GET")
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/home/charles-003/golive_asia_backup/serve.py", line 67, in _proxy_request
+    self.end_headers()
+    ~~~~~~~~~~~~~~~~^^
+  File "/home/charles-003/golive_asia_backup/serve.py", line 111, in end_headers
+    super().end_headers()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/http/server.py", line 553, in end_headers
+    self.flush_headers()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/http/server.py", line 557, in flush_headers
+    self.wfile.write(b"".join(self._headers_buffer))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/socketserver.py", line 845, in write
+    self._sock.sendall(b)
+    ~~~~~~~~~~~~~~~~~~^^^
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+127.0.0.1 - - [04/Nov/2026 21:58:20] "GET /api/announcement/list?is_featured=1&itemsPerPage=4 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:58:20] "GET /api/announcement/list?is_featured=1&itemsPerPage=4 HTTP/1.1" 502 -
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 56138)
+Traceback (most recent call last):
+  File "/home/charles-003/golive_asia_backup/serve.py", line 55, in _proxy_request
+    self.wfile.write(data)
+    ~~~~~~~~~~~~~~~~^^^^^^
+  File "/usr/lib/python3.13/socketserver.py", line 845, in write
+    self._sock.sendall(b)
+    ~~~~~~~~~~~~~~~~~~^^^
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/charles-003/golive_asia_backup/serve.py", line 18, in __init__
+    super().__init__(*args, directory=WEB_DIR, **kwargs)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/http/server.py", line 687, in __init__
+    super().__init__(*args, **kwargs)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/socketserver.py", line 766, in __init__
+    self.handle()
+    ~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/http/server.py", line 451, in handle
+    self.handle_one_request()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/http/server.py", line 439, in handle_one_request
+    method()
+    ~~~~~~^^
+  File "/home/charles-003/golive_asia_backup/serve.py", line 81, in do_GET
+    return self._proxy_request("GET")
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/home/charles-003/golive_asia_backup/serve.py", line 67, in _proxy_request
+    self.end_headers()
+    ~~~~~~~~~~~~~~~~^^
+  File "/home/charles-003/golive_asia_backup/serve.py", line 111, in end_headers
+    super().end_headers()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/http/server.py", line 553, in end_headers
+    self.flush_headers()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/http/server.py", line 557, in flush_headers
+    self.wfile.write(b"".join(self._headers_buffer))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/socketserver.py", line 845, in write
+    self._sock.sendall(b)
+    ~~~~~~~~~~~~~~~~~~^^^
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+127.0.0.1 - - [04/Nov/2026 21:58:34] "GET /home HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 21:58:34] "GET /scripts/appleid.auth.js HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 21:58:37] "GET /api/event/page/landing/flag HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:58:37] "GET /api/event/list?is_major_sales=1&itemsPerPage=10 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:58:46] "GET /api/event/list?is_featured=1&itemsPerPage=99 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:58:49] "GET /api/advertisementBanner/list?itemsPerPage=10&archiveStatus=ACTIVE&platform=web HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:58:50] "GET /api/event/category/list?itemsPerPage=99 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:58:54] "GET /api/announcement/list?is_featured=1&itemsPerPage=4 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:58:58] "GET /api/event/list?itemsPerPage=9&page=1&sortBy=created_at&sortDesc=true HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 21:58:58] "GET /images/icon/trending.svg HTTP/1.1" 404 -
+127.0.0.1 - - [04/Nov/2026 21:58:58] "GET /images/icon/green_dot.svg HTTP/1.1" 404 -
+127.0.0.1 - - [04/Nov/2026 22:01:50] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:01:53] "POST /api/user/login HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:21:43] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:21:43] "GET /assets/index-B3hwWkiv.css HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:21:44] "GET /images/logo/logo.png HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 22:21:44] "GET /assets/index-S_gKt5kb.js HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 22:21:44] "GET /assets/el-button-BsfP9n4d.js HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 22:21:44] "GET /assets/el-button-CNxZYMb2.css HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 22:21:44] "GET /assets/swiper-CW1QUXDe.js HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 22:21:44] "GET /assets/el-scrollbar-WwGscieT.js HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 22:21:44] "GET /assets/el-scrollbar-BWxh-h6K.css HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 22:21:44] "GET /assets/castArray-CcNg4HKa.js HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 22:21:44] "GET /assets/el-dialog-BDVn8PXQ.css HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 22:21:44] "GET /assets/el-dialog-Bhrhk7TR.js HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 22:21:44] "GET /assets/swiper-Bmq_i_gU.css HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 22:21:44] "GET /assets/eventRow-BbT3Q7LF.js HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 22:21:44] "GET /assets/index-D0W6oDrN.js HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 22:21:44] "GET /assets/el-input-CaECnuly.js HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 22:21:44] "GET /assets/el-input-haxN-bjV.css HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 22:21:44] "GET /assets/index-7qFzxaK-.js HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 22:21:44] "GET /assets/eventTag-CylCOQlr.js HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 22:21:44] "GET /assets/eventTag-BVqgIU99.css HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 22:21:44] "GET /assets/eventSlug-BOfv6vB5.js HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 22:21:44] "GET /assets/eventRow-CQl2CMGg.css HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 22:21:44] "GET /assets/socialMedia-CnsKluqP.js HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 22:21:44] "GET /assets/el-card-DCNCxAxl.js HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 22:21:44] "GET /assets/el-card-DGFn2Dlf.css HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 22:21:44] "GET /assets/socialMedia-CdgWFg4H.css HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 22:21:44] "GET /assets/index-BLwMd4CF.css HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 22:21:46] "GET /api/event/page/landing/flag HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:21:46] "GET /api/event/list?is_major_sales=1&itemsPerPage=10 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:21:47] "GET /api/event/list?is_featured=1&itemsPerPage=99 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:21:49] "GET /api/event/category/list?itemsPerPage=99 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:21:49] "GET /api/announcement/list?is_featured=1&itemsPerPage=4 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:21:50] "GET /api/advertisementBanner/list?itemsPerPage=10&archiveStatus=ACTIVE&platform=web HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:21:50] "GET /images/ig.jpeg HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 22:21:51] "GET /api/event/list?itemsPerPage=9&page=1&sortBy=created_at&sortDesc=true HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:21:51] "GET /images/fb.jpeg HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 22:21:51] "GET /images/x.jpeg HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 22:21:51] "GET /images/download_right_image.webp HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 22:21:51] "GET /images/icon/trending.svg HTTP/1.1" 404 -
+127.0.0.1 - - [04/Nov/2026 22:21:51] "GET /images/icon/green_dot.svg HTTP/1.1" 404 -
+127.0.0.1 - - [04/Nov/2026 22:22:00] "GET /assets/index-OaX_yiqL.js HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 22:22:00] "GET /assets/index-BEA9sfKh.css HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 22:22:03] "GET /api/user/ticket/list?itemsPerPage=9999 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:22:07] "GET /my-tickets HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:22:08] "GET /api/user/ticket/list?itemsPerPage=9999 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:22:10] "GET /my-tickets HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 22:22:11] "GET /api/user/ticket/list?itemsPerPage=9999 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:22:34] "GET /my-tickets HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 22:22:35] "GET /api/user/ticket/list?itemsPerPage=9999 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:23:54] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:23:54] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:24:10] "GET /my-tickets HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:24:11] "GET /assets/index-B3hwWkiv.css HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 22:24:18] "GET /api/user/ticket/list?itemsPerPage=9999 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:24:22] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:24:25] "POST /api/user/login HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:24:25] "GET /images/logo/logo.png HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:24:25] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:41:26] "GET /assets/index-CB6G4Cyn.js HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:41:26] "GET /assets/index-CB6G4Cyn.js HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:41:26] "HEAD /assets/index-CB6G4Cyn.js HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:41:39] "HEAD /assets/index-CB6G4Cyn.js HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:41:55] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:41:55] "GET /assets/index-CB6G4Cyn.js HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:41:55] "GET /assets/index-B3hwWkiv.css HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:41:55] "GET /images/logo/logo.png HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:42:06] "POST /api/user/login HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:47:30] code 404, message File not found
+127.0.0.1 - - [04/Nov/2026 22:47:30] "HEAD /api/event/list?itemsPerPage=9&page=1&sortBy=created_at&sortDesc=true HTTP/1.1" 404 -
+127.0.0.1 - - [04/Nov/2026 22:47:30] code 404, message File not found
+127.0.0.1 - - [04/Nov/2026 22:47:30] "HEAD /api/event/list?itemsPerPage=9&page=1&sortBy=created_at&sortDesc=true HTTP/1.1" 404 -
+127.0.0.1 - - [04/Nov/2026 22:47:30] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:47:41] "POST /api/user/login HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:49:11] "HEAD /api/event/list?itemsPerPage=9&page=1&sortBy=created_at&sortDesc=true HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:49:12] "HEAD /api/event/list?itemsPerPage=9&page=1&sortBy=created_at&sortDesc=true HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:49:12] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:49:12] "POST /api/user/login HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:49:12] "GET /assets/index-CB6G4Cyn.js HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:49:12] "GET /assets/index-B3hwWkiv.css HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:49:25] "GET /api/event/list?itemsPerPage=9&page=1&sortBy=created_at&sortDesc=true HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:49:25] "GET /api/event/list?itemsPerPage=9&page=1&sortBy=created_at&sortDesc=true HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:50:03] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:50:03] "GET /login HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:50:03] "GET /my-tickets HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:50:05] "POST /api/user/login HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:52:01] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:52:02] "GET /scripts/appleid.auth.js HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:52:02] "GET /assets/index-B3hwWkiv.css HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:52:05] "GET /images/logo/logo.png HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:52:05] "GET /assets/index-S_gKt5kb.js HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:52:05] "GET /assets/el-button-BsfP9n4d.js HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:52:05] "GET /assets/el-button-CNxZYMb2.css HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:52:05] "GET /assets/swiper-CW1QUXDe.js HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:52:05] "GET /assets/el-scrollbar-WwGscieT.js HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:52:05] "GET /assets/castArray-CcNg4HKa.js HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:52:05] "GET /assets/el-dialog-Bhrhk7TR.js HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:52:05] "GET /assets/eventRow-BbT3Q7LF.js HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:52:05] "GET /assets/index-D0W6oDrN.js HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:52:05] "GET /assets/el-input-CaECnuly.js HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:52:05] "GET /assets/index-7qFzxaK-.js HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:52:05] "GET /assets/eventTag-CylCOQlr.js HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:52:05] "GET /assets/eventSlug-BOfv6vB5.js HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:52:05] "GET /assets/socialMedia-CnsKluqP.js HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:52:05] "GET /assets/el-card-DCNCxAxl.js HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:52:05] "GET /assets/el-scrollbar-BWxh-h6K.css HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:52:05] "GET /assets/el-dialog-BDVn8PXQ.css HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:52:05] "GET /assets/swiper-Bmq_i_gU.css HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:52:05] "GET /assets/el-input-haxN-bjV.css HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:52:05] "GET /assets/eventTag-BVqgIU99.css HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:52:05] "GET /assets/eventRow-CQl2CMGg.css HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:52:06] "GET /assets/el-card-DGFn2Dlf.css HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:52:06] "GET /assets/socialMedia-CdgWFg4H.css HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:52:06] "GET /assets/index-BLwMd4CF.css HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:52:09] "GET /api/event/page/landing/flag HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:52:13] "GET /api/event/list?is_major_sales=1&itemsPerPage=10 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:52:14] "GET /images/noise.svg HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:52:15] "GET /api/event/category/list?itemsPerPage=99 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:52:16] "GET /api/event/list?is_featured=1&itemsPerPage=99 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:52:17] "GET /api/announcement/list?is_featured=1&itemsPerPage=4 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:52:17] "GET /api/advertisementBanner/list?itemsPerPage=10&archiveStatus=ACTIVE&platform=web HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:52:17] "GET /api/event/list?itemsPerPage=9&page=1&sortBy=created_at&sortDesc=true HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:52:19] "GET /images/icon/trending.svg HTTP/1.1" 404 -
+127.0.0.1 - - [04/Nov/2026 22:52:19] "GET /images/icon/green_dot.svg HTTP/1.1" 404 -
+127.0.0.1 - - [04/Nov/2026 22:52:30] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:52:32] "GET /api/event/page/landing/flag HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:52:32] "GET /api/event/list?is_featured=1&itemsPerPage=99 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:52:32] "GET /api/event/category/list?itemsPerPage=99 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:52:32] "GET /api/announcement/list?is_featured=1&itemsPerPage=4 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:52:32] "GET /api/advertisementBanner/list?itemsPerPage=10&archiveStatus=ACTIVE&platform=web HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 22:52:32] "GET /api/event/list?itemsPerPage=9&page=1&sortBy=created_at&sortDesc=true HTTP/1.1" 200 -
+192.168.100.171 - - [18/Nov/2026 11:53:03] "GET / HTTP/1.1" 200 -

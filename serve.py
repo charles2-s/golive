@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Simple SPA static server for the golive-asia mirror with /api proxy."""
+import argparse
 import http.server
 import socketserver
 import os
@@ -46,10 +47,11 @@ class Handler(http.server.SimpleHTTPRequestHandler):
             if time.time() - ts < API_CACHE_TTL:
                 self.send_response(200)
                 self.send_header("Content-Type", content_type)
-                self.send_header("Access-Control-Allow-Origin", "*")
                 self.send_header("X-Cache", "HIT")
                 self.send_header("Content-Length", str(len(data)))
                 self.end_headers()
+                if method != "HEAD":
+                    self.wfile.write(data)
                 return
 
         try:
@@ -66,10 +68,12 @@ class Handler(http.server.SimpleHTTPRequestHandler):
             }
             if self.headers.get("Content-Type"):
                 headers["Content-Type"] = self.headers["Content-Type"]
-            if self.headers.get("Authorization"):
-                headers["Authorization"] = self.headers["Authorization"]
-            if self.headers.get("Cookie"):
-                headers["Cookie"] = self.headers["Cookie"]
+            # Only forward credentials to the API when the client is local
+            if self.client_address[0] == "127.0.0.1":
+                if self.headers.get("Authorization"):
+                    headers["Authorization"] = self.headers["Authorization"]
+                if self.headers.get("Cookie"):
+                    headers["Cookie"] = self.headers["Cookie"]
 
             req = urllib.request.Request(
                 url,
@@ -87,7 +91,6 @@ class Handler(http.server.SimpleHTTPRequestHandler):
 
                 self.send_response(resp.status)
                 self.send_header("Content-Type", content_type)
-                self.send_header("Access-Control-Allow-Origin", "*")
                 self.send_header("X-Cache", "MISS")
                 self.send_header("Content-Length", str(len(data)))
                 self.end_headers()
@@ -97,14 +100,12 @@ class Handler(http.server.SimpleHTTPRequestHandler):
             data = e.read() if e.fp else b""
             self.send_response(e.code)
             self.send_header("Content-Type", "application/json")
-            self.send_header("Access-Control-Allow-Origin", "*")
             self.end_headers()
             if method != "HEAD":
                 self.wfile.write(data)
         except Exception as e:
             self.send_response(502)
             self.send_header("Content-Type", "text/plain")
-            self.send_header("Access-Control-Allow-Origin", "*")
             self.end_headers()
             if method != "HEAD":
                 self.wfile.write(str(e).encode())
@@ -121,7 +122,6 @@ class Handler(http.server.SimpleHTTPRequestHandler):
 
     def do_OPTIONS(self):
         self.send_response(200)
-        self.send_header("Access-Control-Allow-Origin", "*")
         self.send_header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS")
         self.send_header("Access-Control-Allow-Headers", "Content-Type, Authorization, Cookie, Origin, Accept")
         self.send_header("Access-Control-Allow-Credentials", "true")
@@ -211,6 +211,10 @@ class Handler(http.server.SimpleHTTPRequestHandler):
 
 
 
-with socketserver.TCPServer(("0.0.0.0", PORT), Handler) as httpd:
-    print(f"Serving golive-asia mirror at http://0.0.0.0:{PORT}")
+parser = argparse.ArgumentParser(description="Serve the golive-asia SPA mirror with /api proxy")
+parser.add_argument("--host", default="127.0.0.1", help="Host to bind to (default: 127.0.0.1)")
+args = parser.parse_args()
+
+with socketserver.TCPServer((args.host, PORT), Handler) as httpd:
+    print(f"Serving golive-asia mirror at http://{args.host}:{PORT}")
     httpd.serve_forever()
